@@ -12,6 +12,12 @@ export interface Room {
   keyLetter: string;
   position: Position;
   color: LampColor;
+  doors: {
+    north: boolean;
+    east: boolean;
+    south: boolean;
+    west: boolean;
+  };
 }
 
 export interface Hall {

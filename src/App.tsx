@@ -28,10 +28,16 @@ function App() {
       try {
         const parsedMap: RoomMap = JSON.parse(savedMap)
         
-        // Ensure all rooms have a color property (for backward compatibility)
+        // Ensure all rooms have a color property and doors (for backward compatibility)
         const updatedRooms = parsedMap.rooms.map(room => ({
           ...room,
-          color: room.color || null
+          color: room.color || null,
+          doors: room.doors || {
+            north: false,
+            east: false,
+            south: false,
+            west: false
+          }
         }))
         
         setRooms(updatedRooms)
@@ -121,10 +127,16 @@ function App() {
       try {
         const map: RoomMap = JSON.parse(e.target?.result as string)
         
-        // Ensure all rooms have a color property (for backward compatibility)
+        // Ensure all rooms have a color property and doors (for backward compatibility)
         const updatedRooms = map.rooms.map(room => ({
           ...room,
-          color: room.color || null
+          color: room.color || null,
+          doors: room.doors || {
+            north: false,
+            east: false,
+            south: false,
+            west: false
+          }
         }))
         
         setRooms(updatedRooms)

@@ -63,6 +63,7 @@ const RoomGrid: React.FC<RoomGridProps> = ({ rooms, halls, gridSize, onRoomClick
     return colorMap[room.color as Exclude<NonNullable<LampColor>, 'prismatic'>];
   };
 
+
   const renderCell = (row: number, col: number) => {
     const room = getRoom(row, col);
     const roomColorClass = getRoomColorClass(room);
@@ -89,6 +90,20 @@ const RoomGrid: React.FC<RoomGridProps> = ({ rooms, halls, gridSize, onRoomClick
               <div 
                 className={`absolute bottom-1 right-1 w-3 h-3 rounded-full ${room.color === 'prismatic' ? 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500' : `bg-${room.color}-500`}`}
               />
+            )}
+            
+            {/* Door indicators */}
+            {room.doors?.north && (
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-2 bg-gray-600 border border-gray-400" />
+            )}
+            {room.doors?.east && (
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-6 bg-gray-600 border border-gray-400" />
+            )}
+            {room.doors?.south && (
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-2 bg-gray-600 border border-gray-400" />
+            )}
+            {room.doors?.west && (
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-6 bg-gray-600 border border-gray-400" />
             )}
           </div>
         )}

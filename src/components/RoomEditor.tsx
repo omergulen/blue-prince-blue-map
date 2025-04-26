@@ -20,6 +20,12 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
   const [keyWord, setKeyWord] = React.useState(room?.keyWord || '');
   const [keyLetter, setKeyLetter] = React.useState(room?.keyLetter || '');
   const [color, setColor] = React.useState<LampColor>(room?.color || null);
+  const [doors, setDoors] = React.useState({
+    north: room?.doors?.north || false,
+    east: room?.doors?.east || false,
+    south: room?.doors?.south || false,
+    west: room?.doors?.west || false
+  });
 
   React.useEffect(() => {
     if (room) {
@@ -27,11 +33,23 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
       setKeyWord(room.keyWord || '');
       setKeyLetter(room.keyLetter || '');
       setColor(room.color || null);
+      setDoors({
+        north: room.doors?.north || false,
+        east: room.doors?.east || false,
+        south: room.doors?.south || false,
+        west: room.doors?.west || false
+      });
     } else {
       setName('');
       setKeyWord('');
       setKeyLetter('');
       setColor(null);
+      setDoors({
+        north: false,
+        east: false,
+        south: false,
+        west: false
+      });
     }
   }, [room]);
   
@@ -45,10 +63,18 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
       keyLetter: keyLetter.charAt(0).toUpperCase(),
       position,
       color,
+      doors,
     };
 
     onSave(updatedRoom);
     onOpenChange(false);
+  };
+  
+  const toggleDoor = (direction: 'north' | 'east' | 'south' | 'west') => {
+    setDoors(prev => ({
+      ...prev,
+      [direction]: !prev[direction]
+    }));
   };
   
   const colorOptions: { value: LampColor; label: string }[] = [
@@ -138,6 +164,55 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
             </div>
           </div>
           {renderColorSelector()}
+          
+          <div className="grid gap-2">
+            <Label className="text-base">Doors</Label>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="door-north"
+                  checked={doors.north}
+                  onChange={() => toggleDoor('north')}
+                  className="mr-2 h-4 w-4"
+                />
+                <Label htmlFor="door-north">North Door</Label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="door-east"
+                  checked={doors.east}
+                  onChange={() => toggleDoor('east')}
+                  className="mr-2 h-4 w-4"
+                />
+                <Label htmlFor="door-east">East Door</Label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="door-south"
+                  checked={doors.south}
+                  onChange={() => toggleDoor('south')}
+                  className="mr-2 h-4 w-4"
+                />
+                <Label htmlFor="door-south">South Door</Label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="door-west"
+                  checked={doors.west}
+                  onChange={() => toggleDoor('west')}
+                  className="mr-2 h-4 w-4"
+                />
+                <Label htmlFor="door-west">West Door</Label>
+              </div>
+            </div>
+            <div className="text-sm text-gray-400 mt-1">
+              Select which sides of the room have doors
+            </div>
+          </div>
         </div>
         <div className="flex justify-end gap-3 pt-2">
           <Button variant="outline" onClick={() => onOpenChange(false)} className="border-gray-500 text-gray-300">
