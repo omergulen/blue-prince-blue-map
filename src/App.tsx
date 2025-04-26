@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Room, Hall, RoomMap, Position } from './types/room'
+import { Room, Hall, RoomMap, Position, LampColor } from './types/room'
+
+// Interface for backward compatibility with old room format
+interface LegacyRoom extends Omit<Room, 'colors'> {
+  color?: LampColor;
+}
 import RoomGrid from './components/RoomGrid'
 import RoomEditor from './components/RoomEditor'
 import HallEditor from './components/HallEditor'
@@ -28,10 +33,11 @@ function App() {
       try {
         const parsedMap: RoomMap = JSON.parse(savedMap)
         
-        // Ensure all rooms have a color property and doors (for backward compatibility)
+        // Ensure all rooms have colors property and doors (for backward compatibility)
         const updatedRooms = parsedMap.rooms.map(room => ({
           ...room,
-          color: room.color || null,
+          // Convert old color property to colors array if needed
+          colors: room.colors || ((room as LegacyRoom).color ? [(room as LegacyRoom).color] : []),
           doors: room.doors || {
             north: false,
             east: false,
@@ -127,10 +133,11 @@ function App() {
       try {
         const map: RoomMap = JSON.parse(e.target?.result as string)
         
-        // Ensure all rooms have a color property and doors (for backward compatibility)
+        // Ensure all rooms have colors property and doors (for backward compatibility)
         const updatedRooms = map.rooms.map(room => ({
           ...room,
-          color: room.color || null,
+          // Convert old color property to colors array if needed
+          colors: room.colors || ((room as LegacyRoom).color ? [(room as LegacyRoom).color] : []),
           doors: room.doors || {
             north: false,
             east: false,

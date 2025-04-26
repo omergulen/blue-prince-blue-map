@@ -11,7 +11,7 @@ export interface Room {
   keyWord: string;
   keyLetter: string;
   position: Position;
-  color: LampColor;
+  colors: LampColor[];
   doors: {
     north: boolean;
     east: boolean;

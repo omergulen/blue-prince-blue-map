@@ -19,7 +19,7 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
   const [name, setName] = React.useState(room?.name || '');
   const [keyWord, setKeyWord] = React.useState(room?.keyWord || '');
   const [keyLetter, setKeyLetter] = React.useState(room?.keyLetter || '');
-  const [color, setColor] = React.useState<LampColor>(room?.color || null);
+  const [selectedColors, setSelectedColors] = React.useState<LampColor[]>(room?.colors || []);
   const [doors, setDoors] = React.useState({
     north: room?.doors?.north || false,
     east: room?.doors?.east || false,
@@ -32,7 +32,7 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
       setName(room.name || '');
       setKeyWord(room.keyWord || '');
       setKeyLetter(room.keyLetter || '');
-      setColor(room.color || null);
+      setSelectedColors(room.colors || []);
       setDoors({
         north: room.doors?.north || false,
         east: room.doors?.east || false,
@@ -43,7 +43,7 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
       setName('');
       setKeyWord('');
       setKeyLetter('');
-      setColor(null);
+      setSelectedColors([]);
       setDoors({
         north: false,
         east: false,
@@ -62,7 +62,7 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
       keyWord,
       keyLetter: keyLetter.charAt(0).toUpperCase(),
       position,
-      color,
+      colors: selectedColors,
       doors,
     };
 
@@ -77,6 +77,17 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
     }));
   };
   
+  const toggleColor = (colorValue: LampColor) => {
+    setSelectedColors(prev => {
+      // If color is already selected, remove it
+      if (prev.includes(colorValue)) {
+        return prev.filter(c => c !== colorValue);
+      }
+      // Otherwise add it
+      return [...prev, colorValue];
+    });
+  };
+  
   const colorOptions: { value: LampColor; label: string }[] = [
     { value: null, label: 'None' },
     { value: 'red', label: 'Red' },
@@ -88,36 +99,51 @@ const RoomEditor: React.FC<RoomEditorProps> = ({ open, onOpenChange, room, posit
     { value: 'pink', label: 'Pink' },
     { value: 'prismatic', label: 'Prismatic' },
   ];
-  
+
   const renderColorSelector = () => {
     return (
-      <div className="grid gap-2">
-        <Label className="text-base">Room Color</Label>
-        <div className="grid grid-cols-4 gap-2">
-          {colorOptions.map((option) => (
-            <div
-              key={option.label}
-              className={`
-                flex flex-col items-center justify-center p-2 rounded-md cursor-pointer
-                ${color === option.value ? 'ring-2 ring-white' : 'ring-1 ring-gray-600'}
-                ${option.value ? `bg-${option.value}-500/20` : 'bg-gray-700'}
-              `}
-              onClick={() => setColor(option.value)}
-            >
-              <div 
-                className={`w-6 h-6 rounded-full mb-1 ${option.value === 'prismatic' ? 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500' : option.value ? `bg-${option.value}-500` : 'bg-gray-500'}`}
-              />
-              <span className="text-xs">{option.label}</span>
-            </div>
+      <div className="space-y-3">
+        <Label className="text-base">Lamp Colors (select multiple)</Label>
+        <div className="flex flex-wrap gap-3">
+          {colorOptions.map((colorOption) => (
+            <button
+              key={colorOption.label}
+              type="button"
+              className={`w-10 h-10 rounded-full border-2 ${
+                selectedColors.includes(colorOption.value) ? 'border-white shadow-md' : 'border-gray-400'
+              } ${
+                colorOption.value
+                  ? `bg-${colorOption.value}-${colorOption.value === 'yellow' ? '300' : '500'}`
+                  : 'bg-gray-200'
+              }`}
+              style={{
+                background: colorOption.value === 'prismatic'
+                  ? 'linear-gradient(to right, #ef4444, #3b82f6, #22c55e)'
+                  : colorOption.value
+                    ? {
+                        'red': '#ef4444',
+                        'orange': '#f97316',
+                        'yellow': '#eab308',
+                        'green': '#22c55e',
+                        'blue': '#3b82f6',
+                        'purple': '#a855f7',
+                        'pink': '#ec4899',
+                      }[colorOption.value as Exclude<NonNullable<LampColor>, 'prismatic'>] 
+                    : '#e5e7eb'
+              }}
+              onClick={() => toggleColor(colorOption.value)}
+              title={colorOption.label}
+            />
           ))}
         </div>
         <div className="text-sm text-gray-400 mt-1">
-          This color will be used to highlight the room
+          {selectedColors.length > 0 
+            ? `Selected colors: ${selectedColors.map(c => colorOptions.find(opt => opt.value === c)?.label).join(', ')}` 
+            : 'No colors selected'}
         </div>
       </div>
     );
   };
-
 
 
   return (

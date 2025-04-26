@@ -43,24 +43,32 @@ const RoomGrid: React.FC<RoomGridProps> = ({ rooms, halls, gridSize, onRoomClick
     return colorMap[hall.color as Exclude<NonNullable<LampColor>, 'prismatic'>];
   };
 
-  const getRoomColorClass = (room: Room | null): string => {
-    if (!room || !room.color) return '';
+  const getRoomColorClass = (room: Room | null) => {
+    if (!room || !room.colors || room.colors.length === 0) return 'bg-indigo-800/80 border-indigo-600/50';
     
-    if (room.color === 'prismatic') {
-      return 'bg-gradient-to-r from-red-500/30 via-blue-500/30 to-green-500/30 border-purple-400';
+    // If there's only one color
+    if (room.colors.length === 1) {
+      const color = room.colors[0];
+      if (color === 'prismatic') {
+        return 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500 border-white/50';
+      }
+      
+      const colorMap = {
+        'red': 'bg-red-500/30 border-red-500',
+        'orange': 'bg-orange-500/30 border-orange-500',
+        'yellow': 'bg-yellow-300/30 border-yellow-300',
+        'green': 'bg-green-500/30 border-green-500',
+        'blue': 'bg-blue-500/30 border-blue-500',
+        'purple': 'bg-purple-500/30 border-purple-500',
+        'pink': 'bg-pink-500/30 border-pink-500',
+        'null': 'bg-indigo-800/80 border-indigo-600/50'
+      } as Record<string, string>;
+      
+      return colorMap[color as Exclude<NonNullable<LampColor>, 'prismatic'>];
     }
     
-    const colorMap: Record<Exclude<NonNullable<LampColor>, 'prismatic'>, string> = {
-      'red': 'bg-red-500/30 border-red-500',
-      'orange': 'bg-orange-500/30 border-orange-500',
-      'yellow': 'bg-yellow-500/30 border-yellow-500', // Fixed yellow to be brighter
-      'green': 'bg-green-500/30 border-green-500',
-      'blue': 'bg-blue-500/30 border-blue-500',
-      'purple': 'bg-purple-500/30 border-purple-500',
-      'pink': 'bg-pink-500/30 border-pink-500',
-    };
-    
-    return colorMap[room.color as Exclude<NonNullable<LampColor>, 'prismatic'>];
+    // If there are multiple colors, return a special class
+    return 'bg-indigo-800/80 border-indigo-600/50'; // We'll handle multiple colors with inline styles
   };
 
 
@@ -72,11 +80,29 @@ const RoomGrid: React.FC<RoomGridProps> = ({ rooms, halls, gridSize, onRoomClick
       <div
         className={cn(
           'relative border-2',
-          room && room.color ? roomColorClass : 'bg-indigo-800/80 border-indigo-600/50',
+          roomColorClass,
           'flex flex-col items-center justify-center p-2 cursor-pointer',
           'aspect-square text-center text-white w-full h-full'
         )}
-        style={{ width: '120px', height: '120px' }}
+        style={{
+          width: '120px', 
+          height: '120px',
+          background: room?.colors && room.colors.length > 1 
+            ? `linear-gradient(135deg, ${room.colors.map(color => {
+                if (color === 'prismatic') return 'linear-gradient(to right, #ef4444, #3b82f6, #22c55e)';
+                return color ? {
+                  'red': '#ef444480',
+                  'orange': '#f9731680',
+                  'yellow': '#eab30880',
+                  'green': '#22c55e80',
+                  'blue': '#3b82f680',
+                  'purple': '#a855f780',
+                  'pink': '#ec489980',
+                  'null': '#e5e7eb80'
+                }[color as string] : '#e5e7eb80';
+              }).join(', ')})`
+            : undefined
+        }}
         onClick={() => onRoomClick(room, { row, col })}
       >
         {room && (
@@ -86,10 +112,31 @@ const RoomGrid: React.FC<RoomGridProps> = ({ rooms, halls, gridSize, onRoomClick
             {room.keyWord && (
               <div className="text-xs text-white/60 mt-1">({room.keyWord})</div>
             )}
-            {room.color && (
-              <div 
-                className={`absolute bottom-1 right-1 w-3 h-3 rounded-full ${room.color === 'prismatic' ? 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500' : `bg-${room.color}-500`}`}
-              />
+            {room.colors && room.colors.length > 0 && (
+              <div className="absolute bottom-1 right-1 flex space-x-1">
+                {room.colors.map((color, index) => (
+                  <div 
+                    key={`${color}-${index}`}
+                    className={`w-3 h-3 rounded-full`}
+                    style={{
+                      background: color === 'prismatic'
+                        ? 'linear-gradient(to right, #ef4444, #3b82f6, #22c55e)'
+                        : color
+                          ? {
+                              'red': '#ef4444',
+                              'orange': '#f97316',
+                              'yellow': '#eab308',
+                              'green': '#22c55e',
+                              'blue': '#3b82f6',
+                              'purple': '#a855f7',
+                              'pink': '#ec4899',
+                              'null': '#e5e7eb'
+                            }[color as Exclude<NonNullable<LampColor>, 'prismatic'>] 
+                          : '#e5e7eb'
+                    }}
+                  />
+                ))}
+              </div>
             )}
             
             {/* Door indicators */}
