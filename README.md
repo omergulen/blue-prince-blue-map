@@ -1,4 +1,4 @@
-# Room Glow Mapper
+# Blue Prince Back Rooms Mapper
 
 A web application for tracking room mapping progress with colored lamps, key words, and key letters. This application is inspired by the reference at [room-glow-mapper.lovable.app](https://room-glow-mapper.lovable.app/).
 

@@ -22,6 +22,7 @@ const colorOptions: { value: LampColor; label: string }[] = [
   { value: 'blue', label: 'Blue' },
   { value: 'purple', label: 'Purple' },
   { value: 'pink', label: 'Pink' },
+  { value: 'prismatic', label: 'Prismatic' },
 ];
 
 const WallEditor: React.FC<WallEditorProps> = ({ 
@@ -82,17 +83,19 @@ const WallEditor: React.FC<WallEditorProps> = ({
                   : 'bg-gray-200'
               }`}
               style={{
-                backgroundColor: colorOption.value 
-                  ? {
-                      'red': '#ef4444',
-                      'orange': '#f97316',
-                      'yellow': '#eab308',
-                      'green': '#22c55e',
-                      'blue': '#3b82f6',
-                      'purple': '#a855f7',
-                      'pink': '#ec4899',
-                    }[colorOption.value as NonNullable<LampColor>] 
-                  : '#e5e7eb'
+                background: colorOption.value === 'prismatic'
+                  ? 'linear-gradient(to right, #ef4444, #3b82f6, #22c55e)'
+                  : colorOption.value
+                    ? {
+                        'red': '#ef4444',
+                        'orange': '#f97316',
+                        'yellow': '#eab308',
+                        'green': '#22c55e',
+                        'blue': '#3b82f6',
+                        'purple': '#a855f7',
+                        'pink': '#ec4899',
+                      }[colorOption.value as Exclude<NonNullable<LampColor>, 'prismatic'>] 
+                    : '#e5e7eb'
               }}
               onClick={() => setColor(colorOption.value)}
               title={colorOption.label}

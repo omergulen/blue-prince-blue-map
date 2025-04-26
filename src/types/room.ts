@@ -1,4 +1,4 @@
-export type LampColor = 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'purple' | 'pink' | null;
+export type LampColor = 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'purple' | 'pink' | 'prismatic' | null;
 
 export interface Position {
   row: number;
@@ -11,6 +11,7 @@ export interface Room {
   keyWord: string;
   keyLetter: string;
   position: Position;
+  color: LampColor;
 }
 
 export interface Hall {

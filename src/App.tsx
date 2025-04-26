@@ -27,7 +27,14 @@ function App() {
     if (savedMap) {
       try {
         const parsedMap: RoomMap = JSON.parse(savedMap)
-        setRooms(parsedMap.rooms)
+        
+        // Ensure all rooms have a color property (for backward compatibility)
+        const updatedRooms = parsedMap.rooms.map(room => ({
+          ...room,
+          color: room.color || null
+        }))
+        
+        setRooms(updatedRooms)
         setHalls(parsedMap.halls || [])
         setGridSize(parsedMap.gridSize)
         setMapName(parsedMap.name)
@@ -113,11 +120,18 @@ function App() {
     reader.onload = (e) => {
       try {
         const map: RoomMap = JSON.parse(e.target?.result as string)
-        setRooms(map.rooms)
+        
+        // Ensure all rooms have a color property (for backward compatibility)
+        const updatedRooms = map.rooms.map(room => ({
+          ...room,
+          color: room.color || null
+        }))
+        
+        setRooms(updatedRooms)
         setHalls(map.halls || [])
         setGridSize(map.gridSize)
         setMapName(map.name)
-        saveMapToLocalStorage(map.rooms, map.halls)
+        saveMapToLocalStorage(updatedRooms, map.halls)
         toast({
           title: 'Map Imported',
           description: 'Your map has been imported successfully.',
@@ -150,7 +164,7 @@ function App() {
   return (
     <div className="container mx-auto py-8 px-4 flex flex-col items-center">
       <header className="mb-8 text-center">
-        <h1 className="text-3xl font-bold mb-6">Room Glow Mapper</h1>
+        <h1 className="text-3xl font-bold mb-6">Blue Prince Back Rooms Mapper</h1>
         <div className="flex justify-center gap-4 mb-8">
           <Button 
             onClick={handleSaveMap}
@@ -195,7 +209,7 @@ function App() {
           onHallClick={handleHallClick}
         />
         <div className="mt-4 text-sm text-white/70">
-          Click on any cell to add or edit room information<br />
+          Click on any cell to add or edit room information (including room color)<br />
           Click on any hall to edit its properties (lamp color and wall/passage at each end)
         </div>
       </main>

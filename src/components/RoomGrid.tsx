@@ -26,25 +26,52 @@ const RoomGrid: React.FC<RoomGridProps> = ({ rooms, halls, gridSize, onRoomClick
   const getHallColor = (hall: Hall | null): string => {
     if (!hall || !hall.color) return '';
     
-    const colorMap: Record<NonNullable<LampColor>, string> = {
+    if (hall.color === 'prismatic') {
+      return 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500';
+    }
+    
+    const colorMap: Record<Exclude<NonNullable<LampColor>, 'prismatic'>, string> = {
       'red': 'bg-red-500',
       'orange': 'bg-orange-500',
-      'yellow': 'bg-yellow-300',
+      'yellow': 'bg-yellow-500', // Fixed yellow to be brighter
       'green': 'bg-green-500',
       'blue': 'bg-blue-500',
       'purple': 'bg-purple-500',
       'pink': 'bg-pink-500',
     };
     
-    return colorMap[hall.color];
+    return colorMap[hall.color as Exclude<NonNullable<LampColor>, 'prismatic'>];
+  };
+
+  const getRoomColorClass = (room: Room | null): string => {
+    if (!room || !room.color) return '';
+    
+    if (room.color === 'prismatic') {
+      return 'bg-gradient-to-r from-red-500/30 via-blue-500/30 to-green-500/30 border-purple-400';
+    }
+    
+    const colorMap: Record<Exclude<NonNullable<LampColor>, 'prismatic'>, string> = {
+      'red': 'bg-red-500/30 border-red-500',
+      'orange': 'bg-orange-500/30 border-orange-500',
+      'yellow': 'bg-yellow-500/30 border-yellow-500', // Fixed yellow to be brighter
+      'green': 'bg-green-500/30 border-green-500',
+      'blue': 'bg-blue-500/30 border-blue-500',
+      'purple': 'bg-purple-500/30 border-purple-500',
+      'pink': 'bg-pink-500/30 border-pink-500',
+    };
+    
+    return colorMap[room.color as Exclude<NonNullable<LampColor>, 'prismatic'>];
   };
 
   const renderCell = (row: number, col: number) => {
     const room = getRoom(row, col);
+    const roomColorClass = getRoomColorClass(room);
+    
     return (
       <div
         className={cn(
-          'relative bg-indigo-800/80 border border-indigo-600/50',
+          'relative border-2',
+          room && room.color ? roomColorClass : 'bg-indigo-800/80 border-indigo-600/50',
           'flex flex-col items-center justify-center p-2 cursor-pointer',
           'aspect-square text-center text-white w-full h-full'
         )}
@@ -57,6 +84,11 @@ const RoomGrid: React.FC<RoomGridProps> = ({ rooms, halls, gridSize, onRoomClick
             <div className="text-xs text-white/80 mt-1 text-center">{room.name}</div>
             {room.keyWord && (
               <div className="text-xs text-white/60 mt-1">({room.keyWord})</div>
+            )}
+            {room.color && (
+              <div 
+                className={`absolute bottom-1 right-1 w-3 h-3 rounded-full ${room.color === 'prismatic' ? 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500' : `bg-${room.color}-500`}`}
+              />
             )}
           </div>
         )}

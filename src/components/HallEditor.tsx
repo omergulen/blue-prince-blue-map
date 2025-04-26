@@ -22,6 +22,7 @@ const colorOptions: { value: LampColor; label: string }[] = [
   { value: 'blue', label: 'Blue' },
   { value: 'purple', label: 'Purple' },
   { value: 'pink', label: 'Pink' },
+  { value: 'prismatic', label: 'Prismatic' },
 ];
 
 const HallEditor: React.FC<HallEditorProps> = ({ 
@@ -118,22 +119,26 @@ const HallEditor: React.FC<HallEditorProps> = ({
               className={`w-10 h-10 rounded-full border-2 ${
                 color === colorOption.value ? 'border-white shadow-md' : 'border-gray-400'
               } ${
-                colorOption.value
-                  ? `bg-${colorOption.value}-${colorOption.value === 'yellow' ? '300' : '500'}`
-                  : 'bg-gray-200'
+                colorOption.value === 'prismatic' 
+                  ? 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500'
+                  : colorOption.value
+                    ? `bg-${colorOption.value}-${colorOption.value === 'yellow' ? '500' : '500'}`
+                    : 'bg-gray-200'
               }`}
               style={{
-                backgroundColor: colorOption.value 
-                  ? {
-                      'red': '#ef4444',
-                      'orange': '#f97316',
-                      'yellow': '#eab308',
-                      'green': '#22c55e',
-                      'blue': '#3b82f6',
-                      'purple': '#a855f7',
-                      'pink': '#ec4899',
-                    }[colorOption.value as NonNullable<LampColor>] 
-                  : '#e5e7eb'
+                background: colorOption.value === 'prismatic'
+                  ? 'linear-gradient(to right, #ef4444, #3b82f6, #22c55e)'
+                  : colorOption.value
+                    ? {
+                        'red': '#ef4444',
+                        'orange': '#f97316',
+                        'yellow': '#eab308', // Brighter yellow
+                        'green': '#22c55e',
+                        'blue': '#3b82f6',
+                        'purple': '#a855f7',
+                        'pink': '#ec4899',
+                      }[colorOption.value] 
+                    : '#e5e7eb'
               }}
               onClick={() => setColor(colorOption.value)}
               title={colorOption.label}
@@ -178,17 +183,19 @@ const HallEditor: React.FC<HallEditorProps> = ({
             {/* Lamp */}
             {color && (
               <div 
-                className="absolute rounded-full w-4 h-4"
+                className={`absolute rounded-full w-4 h-4 ${color === 'prismatic' ? 'bg-gradient-to-r from-red-500 via-blue-500 to-green-500' : ''}`}
                 style={{
-                  backgroundColor: {
-                    'red': '#ef4444',
-                    'orange': '#f97316',
-                    'yellow': '#eab308',
-                    'green': '#22c55e',
-                    'blue': '#3b82f6',
-                    'purple': '#a855f7',
-                    'pink': '#ec4899',
-                  }[color as NonNullable<LampColor>] || 'transparent'
+                  background: color === 'prismatic'
+                    ? 'linear-gradient(to right, #ef4444, #3b82f6, #22c55e)'
+                    : {
+                      'red': '#ef4444',
+                      'orange': '#f97316',
+                      'yellow': '#eab308', // Brighter yellow
+                      'green': '#22c55e',
+                      'blue': '#3b82f6',
+                      'purple': '#a855f7',
+                      'pink': '#ec4899',
+                    }[color] || 'transparent'
                 }}
               ></div>
             )}
