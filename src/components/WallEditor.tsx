@@ -7,10 +7,10 @@ import { Label } from '../components/ui/label';
 interface WallEditorProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  wall: Wall | null;
+  wall: Hall | null;
   position: Position;
   direction: 'horizontal' | 'vertical';
-  onSave: (wall: Wall) => void;
+  onSave: (wall: Hall) => void;
 }
 
 const colorOptions: { value: LampColor; label: string }[] = [
@@ -32,15 +32,18 @@ const WallEditor: React.FC<WallEditorProps> = ({
   direction,
   onSave 
 }) => {
-  const [isPassage, setIsPassage] = React.useState(wall?.isPassage ?? true);
+  const [startIsWall, setStartIsWall] = React.useState(wall?.startIsWall ?? false);
+  const [endIsWall, setEndIsWall] = React.useState(wall?.endIsWall ?? false);
   const [color, setColor] = React.useState<LampColor>(wall?.color || null);
 
   React.useEffect(() => {
     if (wall) {
-      setIsPassage(wall.isPassage);
+      setStartIsWall(wall.startIsWall);
+      setEndIsWall(wall.endIsWall);
       setColor(wall.color);
     } else {
-      setIsPassage(true);
+      setStartIsWall(false);
+      setEndIsWall(false);
       setColor(null);
     }
   }, [wall]);
@@ -49,11 +52,12 @@ const WallEditor: React.FC<WallEditorProps> = ({
   const directionText = direction === 'horizontal' ? 'Horizontal' : 'Vertical';
 
   const handleSave = () => {
-    const updatedWall: Wall = {
-      id: wall?.id || `wall-${Date.now()}`,
+    const updatedWall: Hall = {
+      id: wall?.id || `hall-${Date.now()}`,
       position,
       direction,
-      isPassage,
+      startIsWall,
+      endIsWall,
       color,
     };
 
@@ -107,41 +111,70 @@ const WallEditor: React.FC<WallEditorProps> = ({
       <DialogContent className="sm:max-w-[450px] bg-gray-900 text-white border border-indigo-400">
         <DialogHeader>
           <DialogTitle className="text-xl text-center">
-            {wall ? 'Edit' : 'Add'} {directionText} {isPassage ? 'Passage' : 'Wall'} {locationText}
+            {wall ? 'Edit' : 'Add'} {directionText} {startIsWall && endIsWall ? 'Hall' : 'Passage'} {locationText}
           </DialogTitle>
         </DialogHeader>
-        <div className="grid gap-6 py-4">
-          <div className="flex flex-col gap-3">
-            <Label htmlFor="isPassage" className="text-base">Connection Type:</Label>
-            <div className="flex gap-6 justify-center">
-              <div className="flex items-center">
-                <input
-                  type="radio"
-                  id="passage"
-                  name="wallType"
-                  checked={isPassage}
-                  onChange={() => setIsPassage(true)}
-                  className="mr-2 h-5 w-5"
-                />
-                <Label htmlFor="passage" className="text-base">Passage (Open)</Label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  type="radio"
-                  id="wall"
-                  name="wallType"
-                  checked={!isPassage}
-                  onChange={() => setIsPassage(false)}
-                  className="mr-2 h-5 w-5"
-                />
-                <Label htmlFor="wall" className="text-base">Wall (Closed)</Label>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-2">
+              <Label className="text-base">{direction === 'horizontal' ? 'Left' : 'Top'} Connection</Label>
+              <div className="flex gap-4">
+                <div className="flex items-center">
+                  <input
+                    type="radio"
+                    id="start-passage"
+                    name="startType"
+                    checked={!startIsWall}
+                    onChange={() => setStartIsWall(false)}
+                    className="mr-2 h-4 w-4"
+                  />
+                  <Label htmlFor="start-passage">Passage (Open)</Label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="radio"
+                    id="start-wall"
+                    name="startType"
+                    checked={startIsWall}
+                    onChange={() => setStartIsWall(true)}
+                    className="mr-2 h-4 w-4"
+                  />
+                  <Label htmlFor="start-wall">Wall (Closed)</Label>
+                </div>
               </div>
             </div>
-            <div className="text-sm text-gray-400 text-center">
-              {isPassage ? 'Passage allows movement between rooms' : 'Wall blocks movement between rooms'}
+            
+            <div className="flex flex-col gap-2">
+              <Label className="text-base">{direction === 'horizontal' ? 'Right' : 'Bottom'} Connection</Label>
+              <div className="flex gap-4">
+                <div className="flex items-center">
+                  <input
+                    type="radio"
+                    id="end-passage"
+                    name="endType"
+                    checked={!endIsWall}
+                    onChange={() => setEndIsWall(false)}
+                    className="mr-2 h-4 w-4"
+                  />
+                  <Label htmlFor="end-passage">Passage (Open)</Label>
+                </div>
+                <div className="flex items-center">
+                  <input
+                    type="radio"
+                    id="end-wall"
+                    name="endType"
+                    checked={endIsWall}
+                    onChange={() => setEndIsWall(true)}
+                    className="mr-2 h-4 w-4"
+                  />
+                  <Label htmlFor="end-wall">Wall (Closed)</Label>
+                </div>
+              </div>
             </div>
           </div>
-          
+          <div className="text-sm text-gray-400 text-center">
+            {startIsWall && endIsWall ? 'Hall blocks movement between rooms' : 'Passage allows movement between rooms'}
+          </div>
           {renderColorSelector()}
         </div>
         <div className="flex justify-end gap-3 pt-2">
