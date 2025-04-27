@@ -1,0 +1,8 @@
+{
+  "rooms": [],
+  "halls": [],
+  "gridSize": { "rows": 9, "cols": 5 },
+  "name": "Empty Map",
+  "createdAt": "2025-04-27T15:30:00.000Z",
+  "updatedAt": "2025-04-27T15:30:00.000Z"
+}

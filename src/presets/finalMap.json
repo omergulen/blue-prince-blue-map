@@ -1,0 +1,1810 @@
+{
+  "rooms": [
+    {
+      "id": "room-1745699695611",
+      "name": "",
+      "keyWord": "Through",
+      "keyLetter": "T",
+      "position": {
+        "row": 0,
+        "col": 0
+      },
+      "color": "red",
+      "colors": ["red"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699851346",
+      "name": "",
+      "keyWord": "Lantern",
+      "keyLetter": "H",
+      "position": {
+        "row": 0,
+        "col": 1
+      },
+      "color": "red",
+      "colors": ["red"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699864046",
+      "name": "",
+      "keyWord": "Light",
+      "keyLetter": "E",
+      "position": {
+        "row": 0,
+        "col": 2
+      },
+      "color": "orange",
+      "colors": ["orange"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699984208",
+      "name": "",
+      "keyWord": "In",
+      "keyLetter": "S",
+      "position": {
+        "row": 0,
+        "col": 3
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699994748",
+      "name": "",
+      "keyWord": "Sketches",
+      "keyLetter": "E",
+      "position": {
+        "row": 0,
+        "col": 4
+      },
+      "color": "prismatic",
+      "colors": ["prismatic"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699913308",
+      "name": "The Pool",
+      "keyWord": "A",
+      "keyLetter": "Y",
+      "position": {
+        "row": 1,
+        "col": 1
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699977480",
+      "name": "",
+      "keyWord": "Tint",
+      "keyLetter": "I",
+      "position": {
+        "row": 1,
+        "col": 2
+      },
+      "color": "purple",
+      "colors": ["purple"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699939304",
+      "name": "",
+      "keyWord": "To",
+      "keyLetter": "P",
+      "position": {
+        "row": 2,
+        "col": 0
+      },
+      "color": "red",
+      "colors": ["red"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700095562",
+      "name": "",
+      "keyWord": "Turn",
+      "keyLetter": "E",
+      "position": {
+        "row": 3,
+        "col": 4
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700331872",
+      "name": "",
+      "keyWord": "of",
+      "keyLetter": "N",
+      "position": {
+        "row": 4,
+        "col": 4
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700366155",
+      "name": "Gallery",
+      "keyWord": "Seek",
+      "keyLetter": "W",
+      "position": {
+        "row": 7,
+        "col": 2
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700391536",
+      "name": "Dining Room",
+      "keyWord": "Light",
+      "keyLetter": "O",
+      "position": {
+        "row": 6,
+        "col": 2
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700441876",
+      "name": "Entrance Hall",
+      "keyWord": "Lies",
+      "keyLetter": "E",
+      "position": {
+        "row": 8,
+        "col": 2
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700429081",
+      "name": "",
+      "keyWord": "Left",
+      "keyLetter": "M",
+      "position": {
+        "row": 7,
+        "col": 4
+      },
+      "color": "green",
+      "colors": ["green"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700379806",
+      "name": "",
+      "keyWord": "Shadows",
+      "keyLetter": "G",
+      "position": {
+        "row": 6,
+        "col": 4
+      },
+      "color": "orange",
+      "colors": ["orange"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700373678",
+      "name": "",
+      "keyWord": "Light",
+      "keyLetter": "T",
+      "position": {
+        "row": 5,
+        "col": 4
+      },
+      "color": "red",
+      "colors": ["red"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700385715",
+      "name": "",
+      "keyWord": "in",
+      "keyLetter": "N",
+      "position": {
+        "row": 6,
+        "col": 3
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700425096",
+      "name": "",
+      "keyWord": "What's",
+      "keyLetter": "A",
+      "position": {
+        "row": 7,
+        "col": 3
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700445537",
+      "name": "",
+      "keyWord": "we",
+      "keyLetter": "S",
+      "position": {
+        "row": 8,
+        "col": 3
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700449625",
+      "name": "",
+      "keyWord": "cast",
+      "keyLetter": "T",
+      "position": {
+        "row": 8,
+        "col": 4
+      },
+      "color": "blue",
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700433867",
+      "name": "",
+      "keyWord": "Of",
+      "keyLetter": "B",
+      "position": {
+        "row": 8,
+        "col": 0
+      },
+      "colors": ["green"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700415745",
+      "name": "",
+      "keyWord": "We",
+      "keyLetter": "E",
+      "position": {
+        "row": 7,
+        "col": 1
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700397049",
+      "name": "",
+      "keyWord": "Lantern",
+      "keyLetter": "M",
+      "position": {
+        "row": 6,
+        "col": 1
+      },
+      "colors": ["orange"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700437617",
+      "name": "",
+      "keyWord": "The",
+      "keyLetter": "L",
+      "position": {
+        "row": 8,
+        "col": 1
+      },
+      "colors": ["red", "pink"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699944450",
+      "name": "",
+      "keyWord": "Find",
+      "keyLetter": "L",
+      "position": {
+        "row": 2,
+        "col": 1
+      },
+      "colors": ["yellow"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700011748",
+      "name": "",
+      "keyWord": "Of",
+      "keyLetter": "N",
+      "position": {
+        "row": 1,
+        "col": 3
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": true,
+        "east": true,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700006842",
+      "name": "",
+      "keyWord": "Truth",
+      "keyLetter": "G",
+      "position": {
+        "row": 1,
+        "col": 4
+      },
+      "colors": ["red"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": true
+      }
+    },
+    {
+      "id": "room-1745700041276",
+      "name": "",
+      "keyWord": "A",
+      "keyLetter": "S",
+      "position": {
+        "row": 2,
+        "col": 4
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": true,
+        "south": true,
+        "west": true
+      }
+    },
+    {
+      "id": "room-1745700046640",
+      "name": "",
+      "keyWord": "Path",
+      "keyLetter": "N",
+      "position": {
+        "row": 2,
+        "col": 3
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": true,
+        "south": true,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700051162",
+      "name": "",
+      "keyWord": "Our",
+      "keyLetter": "A",
+      "position": {
+        "row": 2,
+        "col": 2
+      },
+      "colors": ["purple"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": true,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700111501",
+      "name": "",
+      "keyWord": "wisdom",
+      "keyLetter": "R",
+      "position": {
+        "row": 3,
+        "col": 2
+      },
+      "colors": ["red"],
+      "doors": {
+        "north": true,
+        "east": true,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700103558",
+      "name": "",
+      "keyWord": "to",
+      "keyLetter": "G",
+      "position": {
+        "row": 3,
+        "col": 3
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": true,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700193831",
+      "name": "",
+      "keyWord": "of",
+      "keyLetter": "O",
+      "position": {
+        "row": 3,
+        "col": 1
+      },
+      "colors": ["orange"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": true,
+        "west": true
+      }
+    },
+    {
+      "id": "room-1745700186863",
+      "name": "",
+      "keyWord": "hue",
+      "keyLetter": "F",
+      "position": {
+        "row": 3,
+        "col": 0
+      },
+      "colors": ["orange"],
+      "doors": {
+        "north": true,
+        "east": true,
+        "south": true,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700278598",
+      "name": "",
+      "keyWord": "us",
+      "keyLetter": "B",
+      "position": {
+        "row": 4,
+        "col": 0
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": true,
+        "south": true,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700285161",
+      "name": "",
+      "keyWord": "Right",
+      "keyLetter": "A",
+      "position": {
+        "row": 4,
+        "col": 1
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": true,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700353600",
+      "name": "Corridor",
+      "keyWord": "Pass",
+      "keyLetter": "E",
+      "position": {
+        "row": 5,
+        "col": 2
+      },
+      "colors": ["orange"],
+      "doors": {
+        "north": false,
+        "east": true,
+        "south": false,
+        "west": true
+      }
+    },
+    {
+      "id": "room-1745701142303",
+      "name": "",
+      "keyWord": "Rain",
+      "keyLetter": "C",
+      "position": {
+        "row": 5,
+        "col": 0
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": true,
+        "east": false,
+        "south": false,
+        "west": true
+      }
+    },
+    {
+      "id": "room-1745700349325",
+      "name": "Kitchen",
+      "keyWord": "to",
+      "keyLetter": "R",
+      "position": {
+        "row": 5,
+        "col": 1
+      },
+      "colors": ["yellow"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": true,
+        "west": true
+      }
+    },
+    {
+      "id": "room-1745700362894",
+      "name": "Solarium",
+      "keyWord": "Through",
+      "keyLetter": "A",
+      "position": {
+        "row": 6,
+        "col": 0
+      },
+      "colors": ["green"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": true
+      }
+    },
+    {
+      "id": "room-1745700410804",
+      "name": "",
+      "keyWord": "Past",
+      "keyLetter": "H",
+      "position": {
+        "row": 7,
+        "col": 0
+      },
+      "colors": ["purple"],
+      "doors": {
+        "north": true,
+        "east": true,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700357620",
+      "name": "Music Room",
+      "keyWord": "The",
+      "keyLetter": "S",
+      "position": {
+        "row": 5,
+        "col": 3
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700298221",
+      "name": "Ballroom",
+      "keyWord": "Shade",
+      "keyLetter": "O",
+      "position": {
+        "row": 4,
+        "col": 3
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745700292780",
+      "name": "The Foundation",
+      "keyWord": "A",
+      "keyLetter": "R",
+      "position": {
+        "row": 4,
+        "col": 2
+      },
+      "colors": ["blue"],
+      "doors": {
+        "north": false,
+        "east": true,
+        "south": true,
+        "west": false
+      }
+    },
+    {
+      "id": "room-1745699920612",
+      "name": "",
+      "keyWord": "Cast",
+      "keyLetter": "L",
+      "position": {
+        "row": 1,
+        "col": 0
+      },
+      "colors": ["orange"],
+      "doors": {
+        "north": false,
+        "east": false,
+        "south": false,
+        "west": false
+      }
+    }
+  ],
+  "halls": [
+    {
+      "id": "hall-1745699835137",
+      "position": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745699838588",
+      "position": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699841521",
+      "position": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699854497",
+      "position": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745699857249",
+      "position": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745699869842",
+      "position": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745699873735",
+      "position": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699879045",
+      "position": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745699883710",
+      "position": {
+        "row": 0,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699886313",
+      "position": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699892959",
+      "position": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745699897377",
+      "position": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699902942",
+      "position": {
+        "row": 2,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699906489",
+      "position": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745699924465",
+      "position": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699927497",
+      "position": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699930180",
+      "position": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699932635",
+      "position": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745699934824",
+      "position": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745699948836",
+      "position": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745699952652",
+      "position": {
+        "row": 2,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745699955451",
+      "position": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700000497",
+      "position": {
+        "row": 1,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700016127",
+      "position": {
+        "row": 1,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700023728",
+      "position": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700027843",
+      "position": {
+        "row": 2,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700030446",
+      "position": {
+        "row": 2,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700033558",
+      "position": {
+        "row": 2,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700036281",
+      "position": {
+        "row": 3,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745699958157",
+      "position": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": true,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700199823",
+      "position": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700203280",
+      "position": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700065119",
+      "position": {
+        "row": 4,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": true,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700255046",
+      "position": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700258700",
+      "position": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700261220",
+      "position": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700264182",
+      "position": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700266139",
+      "position": {
+        "row": 3,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700269717",
+      "position": {
+        "row": 4,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700272515",
+      "position": {
+        "row": 3,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700300887",
+      "position": {
+        "row": 5,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700303662",
+      "position": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700306197",
+      "position": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700308867",
+      "position": {
+        "row": 5,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700310315",
+      "position": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700315273",
+      "position": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700335456",
+      "position": {
+        "row": 4,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700338295",
+      "position": {
+        "row": 4,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700343180",
+      "position": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700454727",
+      "position": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "green"
+    },
+    {
+      "id": "hall-1745700458461",
+      "position": {
+        "row": 5,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700461512",
+      "position": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "green"
+    },
+    {
+      "id": "hall-1745700467788",
+      "position": {
+        "row": 5,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700470895",
+      "position": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700476727",
+      "position": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700480450",
+      "position": {
+        "row": 5,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700483323",
+      "position": {
+        "row": 6,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700486750",
+      "position": {
+        "row": 6,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700488940",
+      "position": {
+        "row": 6,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700494978",
+      "position": {
+        "row": 7,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700502157",
+      "position": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700505523",
+      "position": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700512521",
+      "position": {
+        "row": 6,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700514816",
+      "position": {
+        "row": 6,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700517509",
+      "position": {
+        "row": 7,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700519400",
+      "position": {
+        "row": 7,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700523606",
+      "position": {
+        "row": 8,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700525826",
+      "position": {
+        "row": 8,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700532029",
+      "position": {
+        "row": 7,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "green"
+    },
+    {
+      "id": "hall-1745700534512",
+      "position": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "green"
+    },
+    {
+      "id": "hall-1745700536334",
+      "position": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "green"
+    },
+    {
+      "id": "hall-1745700538757",
+      "position": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "green"
+    },
+    {
+      "id": "hall-1745700543092",
+      "position": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700546737",
+      "position": {
+        "row": 8,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700549230",
+      "position": {
+        "row": 8,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700555175",
+      "position": {
+        "row": 7,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700557282",
+      "position": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700559060",
+      "position": {
+        "row": 8,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700562277",
+      "position": {
+        "row": 7,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700564280",
+      "position": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700566095",
+      "position": {
+        "row": 7,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700568368",
+      "position": {
+        "row": 8,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700572226",
+      "position": {
+        "row": 8,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700573784",
+      "position": {
+        "row": 8,
+        "col": 5
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "orange"
+    },
+    {
+      "id": "hall-1745700577893",
+      "position": {
+        "row": 8,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": false,
+      "color": "blue"
+    },
+    {
+      "id": "hall-1745699961616",
+      "position": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": true,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700252159",
+      "position": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": true,
+      "color": "yellow"
+    },
+    {
+      "id": "hall-1745700662436",
+      "position": {
+        "row": 5,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "startIsWall": true,
+      "endIsWall": false,
+      "color": null
+    },
+    {
+      "id": "hall-1745700474308",
+      "position": {
+        "row": 5,
+        "col": 4
+      },
+      "direction": "vertical",
+      "startIsWall": true,
+      "endIsWall": false,
+      "color": "red"
+    },
+    {
+      "id": "hall-1745700463530",
+      "position": {
+        "row": 6,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "startIsWall": true,
+      "endIsWall": false,
+      "color": "green"
+    },
+    {
+      "id": "hall-1745700208883",
+      "position": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": false,
+      "endIsWall": true,
+      "color": "purple"
+    },
+    {
+      "id": "hall-1745700492293",
+      "position": {
+        "row": 6,
+        "col": 1
+      },
+      "direction": "vertical",
+      "startIsWall": true,
+      "endIsWall": false,
+      "color": "green"
+    }
+  ],
+  "gridSize": {
+    "rows": 9,
+    "cols": 5
+  },
+  "name": "My Room Map",
+  "createdAt": "2025-04-27T13:35:09.923Z",
+  "updatedAt": "2025-04-27T13:35:09.923Z"
+}
