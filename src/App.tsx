@@ -285,7 +285,7 @@ function App() {
               onClick={() => loadPresetMap('final')}
               className='bg-indigo-600 hover:bg-indigo-700'
             >
-              <span className='mr-2'>🗺️</span> Load Chotti's Map
+              <span className='mr-2'>🗺️</span> Load Chootti's Map
             </Button>
             <Button
               onClick={() => loadPresetMap('empty')}
